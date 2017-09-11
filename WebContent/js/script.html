@@ -5,7 +5,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<script type="text/javascript">
+<!--  <script type="text/javascript">
 /* 	 string var s= ""
 	 array var ar = []
 	 object var ob ={}  */
@@ -96,8 +96,8 @@ y = prompt("y 값을 입력하세요", 0);
 x=parseInt(x);
 y=parseInt(y);
 ; */
-	</script>
-
+	</script>-->	
+<!-- 
 <script>
 	function printResult(){
 		var x, y;
@@ -109,7 +109,38 @@ y=parseInt(y);
 		btnPrint.value=x+y;
 	}
 </script>
-<input type="button" value="출력" onclick="printResult();" id="btnPrint"/>
+<input type="button" value="출력" onclick="printResult();" id="btnPrint"/> -->
+<script type="text/javascript">
+function calcApp(){
+   
+   var xText = document.getElementById("x");
+   var yText = document.getElementById("y");
+   var addButton = document.getElementById("add-button");
+   var resultText = document.getElementById("result");
+   addButton.onclick = addBtnClick;   
+   
+   function addBtnClick(){
+      
+      var x =parseInt(xText.value);
+      var y =parseInt(yText.value);
+      
+      resultText.value=x+y;
+   }
+}
+   window.onload = calcApp;
+</script>
+</head>
+<body>
+   
+   <!-- <input id="btn-print" type="button" value="출력" /> -->
+   
+   <input type="text" id="x" placeholder="x값을 입력하세요" />
+   <input type="text" id="y" placeholder="y값을 입력하세요" />
+   
+   <input type="button" value="더하기" id="add-button"/>
+   <input type="text" value="" id="result" />
+   
+</body>
 
 </body>
 </html>
