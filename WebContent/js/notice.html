@@ -12,7 +12,11 @@
 		start1Button.onclick = function(){
 			var lbl = opener.document.getElementById("count-label");
 			lbl.textContent=59;
-		}
+		};
+		start2Button.onclick = function(){
+			var lbl = parent.document.getElementById("count-label");
+			lbl.textContent=58;
+		};
 	}
 
 </script>
@@ -20,7 +24,7 @@
 <body>
 	공지사항 페이지
 	<input id="start1"  type="button" value="opener timer start"/>
-	<input id="start12"  type="button" value="parent timer start"/>
+	<input id="start2"  type="button" value="parent timer start"/>
 
 </body>
 </html>
